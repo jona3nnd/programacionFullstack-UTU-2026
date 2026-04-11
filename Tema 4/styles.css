@@ -1,0 +1,255 @@
+
+:root {
+    --color-primario: #1a3a2e;
+    --color-acento: #f4a229;
+    --color-pesca: #e8f4f8;
+    --color-trabajo: #fdf3e3;
+    --color-series: #1c1c2e;
+    --color-texto-oscuro: #222;
+    --color-texto-claro: #f0f0f0;
+    --fuente-titulo: 'Playfair Display', serif;
+    --fuente-cuerpo: 'Lato', sans-serif;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fuente-cuerpo);
+    background-color: #f5f5f0;
+    color: var(--color-texto-oscuro);
+    line-height: 1.7;
+}
+
+
+
+
+header {
+    background-color: var(--color-primario);
+    color: var(--color-texto-claro);
+    text-align: center;
+    padding: 50px 20px 40px;
+}
+
+header h1 {
+    font-family: var(--fuente-titulo);
+    font-size: 3rem;
+    color: var(--color-acento);
+}
+
+header .subtitulo {
+    font-size: 1.1rem;
+    color: #a8c5b0;
+    margin-top: 8px;
+}
+
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.titulo-main {
+    font-family: var(--fuente-titulo);
+    font-size: 2rem;
+    color: var(--color-primario);
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid var(--color-acento);
+    padding-bottom: 12px;
+}
+
+
+section {
+    margin-bottom: 40px;
+    padding: 30px;
+    border-radius: 12px;        
+}
+
+.seccion-contenido {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.seccion-contenido.invertida {
+    flex-direction: row-reverse;
+}
+section h2 {
+    font-family: var(--fuente-titulo);
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+section p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    padding: 4px 0;
+    font-size: 0.95rem;
+}
+
+
+.imagen-contenedor {
+    text-align: center;
+    flex: 0 0 260px;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    max-width: 260px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;    
+    display: block;
+    margin: 0 auto;
+}
+
+.pie-foto {
+    font-size: 0.85rem;
+    color: #777;
+    margin-top: 6px;
+    font-style: italic;
+}
+
+.texto {
+    flex: 1;
+    min-width: 200px;
+}
+
+
+.seccion-pesca {
+    background-color: var(--color-pesca);
+    border-left: 5px solid #3a9ecf;
+}
+
+.seccion-pesca h2 {
+    color: #1a5f8a;
+}
+
+.seccion-trabajo {
+    background-color: var(--color-trabajo);
+    border-left: 5px solid var(--color-acento);
+}
+
+.seccion-trabajo h2 {
+    color: #8a5a00;
+}
+
+.seccion-series {
+    background-color: var(--color-series);
+    color: var(--color-texto-claro);
+    border-left: 5px solid #9b59b6;
+}
+
+.seccion-series h2 {
+    color: #c39bd3;
+}
+
+.seccion-series p,
+.seccion-series ul li {
+    color: #d0d0d0;
+}
+
+.seccion-series .pie-foto {
+    color: #aaa;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    background-color: var(--color-primario);
+    color: #a8c5b0;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* 1. box-shadow
+   Agrega una sombra alrededor de un elemento.
+   Los valores son: desplazamiento-X, desplazamiento-Y, difuminado, color.
+   Crea efecto de "tarjeta flotante" que da profundidad a la página. */
+section {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+}
+
+
+/* 2. border-radius
+   Redondea las esquinas de un elemento.
+   Valor en px (fijo) o % (circular si es cuadrado).
+   Hace que las secciones e imágenes se vean más modernas y suaves. */
+/* Ya aplicado arriba: border-radius: 12px en section y 10px en imágenes */
+
+
+/* 3. transition
+   Permite que un cambio de estilo ocurra de forma gradual (animación suave).
+   Sintaxis: transition: propiedad duración tipo-de-curva;
+   Se usa junto con :hover para crear efectos interactivos sin JavaScript. */
+section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen-contenedor img {
+    transition: transform 0.35s ease;
+}
+
+
+/* 4. transform: scale()
+   Escala (agranda o achica) un elemento visualmente sin cambiar su espacio.
+   scale(1.05) lo hace un 5% más grande al pasar el mouse por encima.
+   Combinado con transition, crea el efecto "zoom suave" en las imágenes. */
+.imagen-contenedor img:hover {
+    transform: scale(1.07);
+}
+
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+}
+
+
+/* 5. letter-spacing
+   Controla el espacio entre cada letra del texto.
+   Valores positivos separan las letras, negativos las juntan.
+   Se usa para dar estilo a títulos y textos en mayúsculas. */
+header h1 {
+    letter-spacing: 3px;
+}
+
+footer p {
+    letter-spacing: 1.5px;
+}
+
+.titulo-main {
+    letter-spacing: 1px;
+}
+
+
+/* 6. backdrop-filter
+   Aplica un efecto visual (como desenfoque) al fondo DETRÁS del elemento.
+   Requiere que el elemento tenga algo de transparencia (background con alpha).
+   Muy usado en menús modernos tipo "vidrio esmerilado" (glassmorphism). */
+header {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px); /* compatibilidad con Safari */
+    background-color: rgba(26, 58, 46, 0.97);
+}
+
+
