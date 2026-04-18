@@ -1,0 +1,62 @@
+body {
+    overflow: scroll;
+    width: 50%;
+    margin-left: auto;
+    border-left: 3px solid black;
+    right: 0;
+
+}
+
+.navegador {
+            
+    width: 50%;
+    position: fixed;
+    top: 0;
+    
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    background-color: #0f0f0f;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    color: aliceblue;
+    align-items: center;
+     box-sizing: border-box; 
+}
+.campana {
+
+  color: gold;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.campana:hover {
+  color: orange;
+}
+.categoria {
+     position: sticky;  
+    top: 100px;         
+    z-index: 99;
+    font-size: 30px;
+    background-color: rgb(107, 163, 247);
+    padding: 30px;
+    cursor: pointer;
+    margin: 30px 0px 800px 0px;
+}
+
+.linea {
+     position: sticky;  /* la línea también se queda fija */
+  top: 100px;     
+  z-index: 98;
+    border: none;
+    border-top: 2px dashed red;
+    margin: 20px 0;
+}
+.contenidolargo {
+    font-size: 30px;
+    background-color: rgb(236, 240, 245);
+    padding: 10%;
+    margin-top: 15px;
+   height: 1000px;
+}   

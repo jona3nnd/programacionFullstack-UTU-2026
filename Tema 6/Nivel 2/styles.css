@@ -1,0 +1,70 @@
+    .contenedor {
+        display: flex;
+        gap: 50px;
+       padding: 40px 20px;
+       align-items: flex-start;
+    }
+ 
+#productoazul:hover {
+    background-color: #022244; /* cambia el color de fondo */
+    filter: brightness(0.8);  /* menos de 1 oscurece */
+    transform: scale(1.08);
+  
+}
+  
+
+
+#productoazul {
+   
+    background-color: #007bff;
+    color: white;
+    padding: 50px 80px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+#productorojo {
+  background-color: #f89587;
+  color: white;
+  padding: 60px 100px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  overflow: visible;
+  position: relative;
+  margin-top: 50px;
+}
+
+.sale {
+  position: absolute;
+  top: -15px;
+  left: 20px;
+  background-color: #cc0000;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 4px 6px;
+  border-radius: 4px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#productoazul2:hover {
+    background-color: #022244; /* cambia el color de fondo */
+    filter: brightness(0.8);  /* menos de 1 oscurece */
+    transform: scale(1.08);
+  
+}
+  
+
+
+#productoazul2 {
+    
+    background-color: #007bff;
+    color: white;
+    padding: 50px 80px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}

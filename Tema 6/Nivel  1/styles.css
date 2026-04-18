@@ -1,0 +1,63 @@
+.contenedor{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+#myButton:hover {
+  background-color: #45a049; /* cambia el color de fondo */
+  transform: scale(1.07);    /* agranda levemente el botón */
+  filter: brightness(1.2);   /* lo hace más brillante */
+}
+
+#myButton{
+    padding: 20px 40px;
+    background-color: #7bf708;
+    color: white;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+
+#myButton2:hover {
+  background-color: #a09245; /* cambia el color de fondo */
+  transform: scale(1.07);    /* agranda levemente el botón */
+  filter: brightness(1.2);   /* lo hace más brillante */
+}
+
+
+#myButton2 {
+    padding: 20px 40px;
+    background-color: #f5dd09;
+    color: rgb(17, 17, 17);
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+#myButton3:hover {
+  background-color: #f50909; /* cambia el color de fondo */
+  transform: scale(1.07);    /* agranda levemente el botón */
+  filter: brightness(1.2);   /* lo hace más brillante */
+}
+
+#myButton3 {
+    padding: 20px 40px;
+    background-color: #f55757;
+    color: white;
+    border: none;
+    border-radius: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.simbolos {
+    position: absolute;
+    top: 2px;
+    right: 4px;
+    font-size: 10px;  
+    
+}
