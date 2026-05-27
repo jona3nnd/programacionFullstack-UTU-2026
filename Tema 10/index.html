@@ -24,16 +24,44 @@
   
   <p id="texto">Este texto cambia de color con classList</p>
   <button onclick="agregarClase()">Agregar clase roja</button>
+
+  <p id="texto2" class="textoRojo">Este texto ya tiene la clase</p>
   <button onclick="quitarClase()">Quitar clase roja</button>
 
   
   <button onclick="cambiarfondo()">Modo oscuro</button>
 
-  <input id="inputLista" type="text" placeholder="Nuevo ítem..." />
+  <input id="inputLista" type="text" placeholder="Nuevo texto..." />
   <button onclick="agregarItem()">Agregar a lista</button>
   <ul id="lista">
     <li>Elemento inicial</li>
   </ul>
+
+  
+  <h2>Formulario</h2>
+
+  <label for="nombre">Nombre</label>
+  <input type="text" id="nombre" placeholder="Tu nombre..." />
+  <span class="error" id="error-nombre"></span>
+
+  <label for="color">Color favorito</label>
+  <input type="text" id="color" placeholder="Ej: azul, rojo, verde..." />
+  <span class="error" id="error-color"></span>
+
+  <label for="mensaje">Mensaje</label>
+  <textarea id="mensaje" placeholder="Escribe tu mensaje..."></textarea>
+  <span class="error" id="error-mensaje"></span>
+
+  <button id="btn-enviar">Enviar</button>
+
+  <div id="resultado" class="oculto">
+    <h3>Datos recibidos:</h3>
+    <p id="resultado-nombre"></p>
+    <p id="resultado-color"></p>
+    <p id="resultado-mensaje"></p>
+  </div>
+
+  <div id="contenedor-tarjetas"></div>
 
   <script src="script.js"></script>
 </body>
