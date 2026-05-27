@@ -1,0 +1,35 @@
+.contenido{
+    background-color: #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+    .card {
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 15px;
+        margin-bottom: 20px;
+        border-left: 5px solid #1827ee;
+    }
+
+    .card h2 {
+        margin-top: 0;
+    }   
+    .card p {
+        margin: 0;
+        color: #555;
+    }                           
+.card:hover {
+    background-color: #ddd;
+}
+.tag {
+    display: inline-block;
+    background-color: #3470f1;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    font-size: 12px;
+    border-left: #1827ee;
+}

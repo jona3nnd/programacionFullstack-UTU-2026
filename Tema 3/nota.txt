@@ -1,0 +1,7 @@
+8
+
+En general, los diagramas y el código están correctos. Como observación, marcaste footer donde no correspondía.
+
+No es obligatorio que todas las páginas tengan footer, main o header, aunque es lo más habitual. En algunos casos pueden no estar presentes o estar integrados dentro de otras secciones o sidebars.
+
+Recordá que las páginas web pueden estructurarse de distintas formas, siempre que mantengan coherencia en su organización.

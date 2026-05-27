@@ -1,0 +1,32 @@
+*{
+    margin: 5px;
+    padding: 7px;    
+
+}
+
+
+.caja{ 
+    display: flex ;
+    gap: 20px;
+    justify-content: flex-start;
+    color: white;
+    width: 600px;
+    height: 150px;
+background-color: rgb(203, 209, 209);
+padding: 20px 10px 10px;
+width: 600px;
+;
+
+.rojo{
+    background-color: red;
+    border: 6px solid black;
+}
+.azul{
+    background-color: blue;
+    border: 6px solid black;
+}
+.verde{
+    background-color: green;
+    border: 6px solid black;
+}
+}
