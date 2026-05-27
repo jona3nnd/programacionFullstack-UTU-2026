@@ -1,7 +1,85 @@
-.fondo{
-     background-color: rgb(230, 17, 17);
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.fondo h1{
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #1a1a1a;
+    padding: 30px;
+}
+
+
+body.fondo {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+
+p {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 8px;
+    border: 2px solid #ccc;
+}
+
+
+input[type="text"] {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    width: 250px;
+}
+
+
+button {
+    padding: 8px 16px;
+    font-size: 14px;
+    background-color: #2d6be4;
     color: white;
-}       
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 16px;
+    margin-right: 6px;
+}
+
+button:hover {
+    background-color: #1a50b8;
+}
+
+
+ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+li {
+    font-size: 15px;
+    padding: 4px 0;
+}
+
+/* Clase roja para classList */
+.textoRojo {
+    color: red;
+    font-weight: bold;
+}

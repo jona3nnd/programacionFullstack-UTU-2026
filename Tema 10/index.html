@@ -1,49 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Práctica DOM</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+<body>
 
-<body class="fondo">
-    
-<div> 
- <h1 id="titulo">Hola Mundo</h1>
-<button onclick ="cambiartitulo ()">cambiar </button>
-</div>
+  
+  <h2 id="titulo">Título original</h2>
+  <button onclick="cambiartitulo()">Cambiar título</button>
 
-<div>
-<p id="parrafo">escribe un programa que cambie el texto del parrafo al hacer click en el boton con   innerHTML</p>
-<button onclick ="cambiarparrafo ()">Cambiar </button>
-</div>
+  <p id="parrafo">Este es el párrafo original.</p>
+  <button onclick="cambiarparrafo()">Cambiar párrafo</button>
 
+  <img id="imagen" src="img/imagen1.png" alt="imagen" />
+  <button onclick="cambiarImagen()">Cambiar imagen</button>
 
+  <input id="inputTexto" type="text" placeholder="Escribe algo..." />
+  <button onclick="Mostrarmensaje()">Mostrar mensaje</button>
 
-<div>
-<img id="imagen" src="img/imagen1.png" alt="300x300" width="300" height="300">
-<button onclick ="cambiarImagen ()">Cambiar Imagen</button>
-</div>
+  
+  <p id="texto">Este texto cambia de color con classList</p>
+  <button onclick="agregarClase()">Agregar clase roja</button>
+  <button onclick="quitarClase()">Quitar clase roja</button>
 
-<div>
-    <input type="text" id="inputTexto" >
-    <button onclick ="Mostrarmensaje ()">Mostrar mensaje</button>
-    <p id=" mensaje"></p>
-</div>
+  
+  <button onclick="cambiarfondo()">Modo oscuro</button>
 
-<div>
-   <p id = texto> nooooooooooooooooooooooooooooooo</p>
-    <button onclick ="cambiarfondo ()">Cambiar color</button>
+  <input id="inputLista" type="text" placeholder="Nuevo ítem..." />
+  <button onclick="agregarItem()">Agregar a lista</button>
+  <ul id="lista">
+    <li>Elemento inicial</li>
+  </ul>
 
-
-</div>
-
-
-
-
-
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
