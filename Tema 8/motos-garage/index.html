@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MOTO WORLD — Catálogo 3D</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- CURSOR PERSONALIZADO -->
+  <div id="cursor"></div>
+
+  <!-- ===== PANTALLA DE INTRO 3D ===== -->
+  <div id="intro">
+    <canvas id="intro-canvas"></canvas>
+    <div class="intro-text">
+      <div class="intro-title">MOTO<br>WORLD</div>
+      <div class="intro-sub">Catálogo 3D de Motocicletas</div>
+      <div class="intro-bar">
+        <div class="intro-bar-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <div class="logo">MOTO<span>WORLD</span></div>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#marcas">Marcas</a>
+      <a href="#cilindradas">CC</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">⚡ Catálogo Interactivo 3D</div>
+      <h1 class="hero-title">SIENTE<br><span>LA</span> POTENCIA</h1>
+      <p class="hero-desc">
+        Explora las mejores motocicletas del mundo. Personaliza colores, llantas
+        y descubre cada detalle técnico.
+      </p>
+      <button class="hero-cta" id="btn-ver-catalogo">Ver Catálogo</button>
+    </div>
+  </section>
+
+  <!-- ===== ESTADÍSTICAS ===== -->
+  <div class="stats">
+    <div class="stat">
+      <div class="stat-num" data-target="48">0</div>
+      <div class="stat-label">Modelos</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="12">0</div>
+      <div class="stat-label">Marcas</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="8">0</div>
+      <div class="stat-label">Categorías CC</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num" data-target="100">0</div>
+      <div class="stat-label">% Personalizables</div>
+    </div>
+  </div>
+
+  <!-- ===== FILTROS Y CATÁLOGO ===== -->
+  <section id="catalogo" class="filters-section">
+    <div class="section-title">Catálogo</div>
+    <div class="filters">
+      <input class="filter-search" id="search" type="text" placeholder="Buscar moto...">
+
+      <div class="filter-group">
+        <span class="filter-label">Marca</span>
+        <select class="filter-select" id="f-marca">
+          <option value="">Todas las marcas</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Cilindrada</span>
+        <select class="filter-select" id="f-cc">
+          <option value="">Todas las CC</option>
+          <option value="50-125">50 – 125 cc</option>
+          <option value="126-300">126 – 300 cc</option>
+          <option value="301-600">301 – 600 cc</option>
+          <option value="601-1000">601 – 1000 cc</option>
+          <option value="1001+">1001+ cc</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Tipo</span>
+        <select class="filter-select" id="f-tipo">
+          <option value="">Todos los tipos</option>
+          <option value="naked">Naked</option>
+          <option value="sport">Sport</option>
+          <option value="cruiser">Cruiser</option>
+          <option value="adventure">Adventure</option>
+          <option value="touring">Touring</option>
+          <option value="scooter">Scooter</option>
+          <option value="enduro">Enduro/Cross</option>
+          <option value="retro">Retro/Cafe</option>
+        </select>
+      </div>
+
+      <button class="filter-btn" id="btn-filtrar">Filtrar</button>
+    </div>
+  </section>
+
+  <!-- ===== GRID DE MOTOS ===== -->
+  <section class="motos-section">
+    <div class="motos-count">
+      Mostrando <span id="moto-count">0</span> motocicletas
+    </div>
+    <div class="motos-grid" id="motos-grid"></div>
+  </section>
+
+  <!-- ===== MODAL DE DETALLE / PERSONALIZACIÓN ===== -->
+  <div id="modal-overlay">
+    <div id="modal">
+      <button class="modal-close" id="btn-close-modal">✕</button>
+
+      <div class="modal-header">
+        <div class="modal-brand" id="m-brand"></div>
+        <div class="modal-name"  id="m-name"></div>
+        <div class="modal-year"  id="m-year"></div>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Canvas de vista previa -->
+        <div class="modal-canvas-wrap">
+          <canvas id="modal-canvas" width="400" height="250"></canvas>
+        </div>
+
+        <!-- Panel de personalización -->
+        <div class="customizer">
+          <h3>🎨 Personalizar</h3>
+
+          <div class="color-section">
+            <div class="color-section-title">Color del carenado</div>
+            <div class="color-swatches" id="body-colors"></div>
+          </div>
+
+          <div class="color-section">
+            <div class="color-section-title">Color del chasis</div>
+            <div class="color-swatches" id="frame-colors"></div>
+          </div>
+
+          <div class="color-section">
+            <div class="color-section-title">Llantas</div>
+            <div class="wheel-options" id="wheel-options">
+              <button class="wheel-btn active" data-wheel="standard">Estándar</button>
+              <button class="wheel-btn" data-wheel="sport">Sport</button>
+              <button class="wheel-btn" data-wheel="fat">Fat</button>
+              <button class="wheel-btn" data-wheel="spoke">Rayos</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Especificaciones técnicas -->
+        <div class="modal-specs">
+          <div class="section-title" style="font-size:1.8rem">Especificaciones</div>
+          <div class="specs-grid" id="m-specs"></div>
+        </div>
+
+        <!-- Descripción -->
+        <div class="modal-description">
+          <div class="section-title" style="font-size:1.8rem">Descripción</div>
+          <p id="m-desc"></p>
+        </div>
+
+      </div><!-- /.modal-body -->
+    </div><!-- /#modal -->
+  </div><!-- /#modal-overlay -->
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <span class="logo">MOTO<span style="color:var(--text2)">WORLD</span></span>
+    <p>Catálogo interactivo 3D de motocicletas. Explora, personaliza y enamórate.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
