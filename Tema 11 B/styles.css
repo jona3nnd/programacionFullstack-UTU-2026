@@ -1,0 +1,176 @@
+.favorite{
+    border: 3px solid gold;
+    background-color: #fff3a6;
+}
+
+/* estilos generales */
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+
+h1 {
+    text-align: center;
+}
+
+
+
+/* formulario */
+
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+/* boton agregar */
+
+form button {
+    background: #2196f3;
+    color: white;
+}
+
+
+
+/* mensaje error */
+
+#error-message {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+/* contadores */
+
+div span {
+    margin: 10px;
+}
+
+
+
+/* filtros */
+
+.filter-btn {
+    background: #444;
+    color: white;
+    margin: 5px;
+}
+
+
+.filter-btn.active {
+    background: green;
+}
+
+
+
+/* boton borrar */
+
+#clear-all {
+    background: red;
+    color: white;
+    margin: 15px;
+}
+
+
+
+/* galeria */
+
+#galeria {
+
+    list-style: none;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    gap: 20px;
+
+}
+
+
+
+/* tarjeta */
+
+#galeria li {
+
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+
+    box-shadow: 0 3px 10px #999;
+
+    text-align: center;
+
+}
+
+
+
+/* imagen */
+
+#galeria img {
+
+    width: 100%;
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+}
+
+
+
+/* favorita */
+
+.favorite {
+
+    border: 4px solid gold;
+    background: #fff4a8 !important;
+
+}
+
+
+
+/* botones tarjeta */
+
+.favorite-btn {
+
+    background: orange;
+    color: white;
+
+}
+
+
+.delete-btn {
+
+    background: crimson;
+    color: white;
+
+}

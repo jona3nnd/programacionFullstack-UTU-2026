@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestion de imagen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Gestión de Imagen</h1>
+
+
+    <form id="form">
+        <label for="tituloimagen">Titulo de la imagen:</label>
+        <input type="text" id="tituloimagen" placeholder="Ingrese el título de la imagen" required>
+        <label for="urlimagen">URL de la imagen:</label>
+        <input type="url" id="urlimagen" placeholder="Ingrese la URL de la imagen" required>    
+        
+        <p id="error-message"></p>
+        <button type="submit">Cargar imagen</button>
+    
+
+    </form>
+
+
+<div>
+ <span> Mostrar todas:
+    <strong id ="TotalDeImagen">0</strong>
+ </span>
+<span> Favoritas:
+    <strong id="mostrarfavoritas">0</strong>
+</span>
+
+<span> No favoritas:
+    <strong id="mostrarnofavoritas">0</strong>
+</span>
+
+</div>
+
+
+<div>
+<button class="filter-btn active" data-filter="todas">Mostrar todas</button>
+<button class="filter-btn" data-filter="favoritas">Mostrar favoritas</button>
+<button class="filter-btn" data-filter="nofavoritas">Mostrar no favoritas</button>
+</div>
+<button id="clear-all">borrar galeria</button>
+
+<div>
+<ul id="galeria"></ul>
+</div>
+
+
+<script src="script.js"></script>
+
+
+
+
+
+
+
+</body>
+</html>

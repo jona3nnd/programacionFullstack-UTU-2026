@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 0 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* ── Formulario ── */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+#task-input:focus {
+    border-color: #555;
+}
+
+#error-message {
+    color: red;
+    font-size: 13px;
+    min-height: 18px;
+}
+
+form button {
+    padding: 10px;
+    font-size: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* ── Contador ── */
+div {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #555;
+}
+
+div strong {
+    color: #333;
+    font-size: 16px;
+}
+
+/* ── Filtros y borrar todas ── */
+.filter-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    margin-right: 6px;
+}
+
+.filter-btn:hover {
+    background-color: #eee;
+}
+
+.filter-btn.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+}
+
+#clear-all {
+    padding: 6px 14px;
+    font-size: 13px;
+    border: 1px solid #e74c3c;
+    border-radius: 6px;
+    background-color: white;
+    color: #e74c3c;
+    cursor: pointer;
+    margin-top: 10px;
+    display: block;
+    margin-bottom: 16px;
+}
+
+#clear-all:hover {
+    background-color: #fdecea;
+}
+
+/* ── Lista de tareas ── */
+#list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+#list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+#list li span {
+    flex: 1;
+    font-size: 15px;
+}
+
+#list li.completada span {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+#list li button {
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: 1px solid;
+}
+
+#list li button:first-of-type {
+    border-color: #27ae60;
+    color: #27ae60;
+    background-color: white;
+}
+
+#list li button:first-of-type:hover {
+    background-color: #eafaf1;
+}
+
+#list li button:last-of-type {
+    border-color: #e74c3c;
+    color: #e74c3c;
+    background-color: white;
+}
+
+#list li button:last-of-type:hover {
+    background-color: #fdecea;
+}

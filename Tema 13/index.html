@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+    <h1>Generar una chiste </h1>
+    <select id="categoria">
+        <option value="Any" selected>Any</option>
+        <option value="Programming">Programming</option>
+        <option value="Misc">Misc</option>
+         <option value="Pun">Pun</option>
+        <option value="Spooky">Spooky</option>
+        <option value="Christmas">Christmas</option>
+
+    </select>
+<select  id="tipo">
+        <option value="single" selected>Single</option>
+        <option value="twopart">Two Part</option>
+    </select>
+
+<select id="idioma">
+        <option value="en" selected>English</option>
+        <option value="es">Spanish</option>
+        <option value="de">German</option>
+        <option value="fr">French</option>
+        <option value="cs">Czech</option>
+        <option value="pt">Portuguese</option>
+    </select>
+    </div><br
+    <div>
+    <label>Filtros:</label>
+    <label >
+        <input type="checkbox" id="nsfw" name="nsfw" value="nsfw">
+        NSFW        
+    </label>
+    
+    <label >
+        <input type="checkbox" id="religious" name="religious" value="religious">
+        Religion
+
+    </label>
+
+        <label >
+            <input type="checkbox" id="political" name="political" value="political">
+            Politico          
+        </label>
+
+            <label >
+                <input type="checkbox" id="racist" name="racist" value="racist">
+                Racita
+            </label>
+
+                    <label >
+                        <input type="checkbox" id="sexist" name="sexist" value="sexist">
+                        Sexista
+                    </label>    
+
+                   <label >
+                        <input type="checkbox" id="explicit" name="explicit" value="explicit">
+                        Explicito
+                    </label>
+    </div> <br>
+<button id="boton">Mostrar chiste</button>
+
+<p id="chiste"></p>
+
+<script src="script.js"></script>
+</body>
+</html>
