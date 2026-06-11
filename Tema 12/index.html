@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="titulo">
+            <h1>Mi coleccion favorita</h1>
+
+
+            <p>
+                Podras guardar tus peliculas,series y video juegos favoritas,
+                rellenado todo el formularo. muchas gracias
+
+            </p>
+        </div>
+    </header>
+    <div class="hero">
+        <h2>Tu colección favorita en un solo lugar.</h2>
+        <p>Guardá películas, series y videojuegos. Seguí tu progreso.</p>
+    </div>
+
+    <main>
+        <div class="layout">
+
+            <div class="formulario">
+
+                <form id="formulario">
+                    <div>
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <br>
+                    <div>
+                        <label for="descripcion">Descripcion</label>
+                        <input type="text" id="descripcion">
+                    </div>
+                    <br>
+
+                    <select name="tipo" id="categoria">
+                        <option value="Video juego">Video Juego</option>
+                        <option value="Pelculas">Peliculas</option>
+                        <option value="Series">Series</option>
+                        <option value="opcional">Eleccion (opcional)</option>
+                    </select>
+                    <br>
+                    <select name="estado" id="estado">
+                        <option value="pendiente">Pendiente</option>
+                        <option value="en progreso">En progreso</option>
+                        <option value="terminado">Terminado</option>
+                    </select>
+                    <br>
+
+                    <div>
+                        <label for="calificacion">Calificación (1 al 5)</label>
+                        <input type="number" id="calificacion" name="calificacion" min="1" max="5">
+
+                        <label for="imagen">URL de imagen</label>
+                        <input type="text" id="imagen" name="imagen" placeholder="https://...">
+                    </div>
+                    <br>
+
+                    <button id="agregar">Agregar</button>
+                </form>
+
+
+            </div>
+
+
+            <div class="imagen-lateral">
+
+                <img
+                    src="https://revistakinemabooks.com/wp-content/uploads/2025/05/copia-de-portadas-revista-1.png?w=1400">
+
+            </div>
+
+        </div>
+        <p id="contador">Elementos agregados: 0</p>
+        <div id="filtros">
+            <button class="filtro" data-filtro="todos">Todos</button>
+            <button class="filtro" data-filtro="Video juego">Videojuegos</button>
+            <button class="filtro" data-filtro="Peliculas">Películas</button>
+            <button class="filtro" data-filtro="Series">Series</button>
+            <button class="filtro" data-filtro="pendiente">Pendientes</button>
+            <button class="filtro" data-filtro="en progreso">En progreso</button>
+            <button class="filtro" data-filtro="terminado">Terminados</button>
+        </div>
+
+        <button id="btnModo">Cambiar modo</button>
+        <section id="tarjetas"></section>
+
+        <p id="MostrarErrores"></p>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
